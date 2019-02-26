@@ -1,0 +1,10 @@
+install.packages("ggplot2")
+library(ggplot2)
+
+input="C:/Users/Sophie/Desktop/test/"
+data=paste(input,"test.csv",sep="")
+
+data=read.csv(data)
+
+ggplot(data,aes(Rating,Weight,fill=Data))+
+  geom_bar(stat="identity",position="dodge")
